@@ -21,7 +21,7 @@ Rails::Initializer.run do |config|
 
   config.action_controller.session = { 
     :session_key => "instiki_session",
-    :secret => 413b360b05de6b16dcb19caa9eedf6fbe32ddbec43616b949f574686db96c6c4
+    :secret => "413b360b05de6b16dcb19caa9eedf6fbe32ddbec43616b949f574686db96c6c4"
    } 
 
   # Don't do file system STAT calls to check to see if the templates have changed.
