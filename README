@@ -17,7 +17,7 @@ Note for Heroku read-only filesystem: file uploads are disabled by default.
 == 5 easy Steps to get the Instiki on Heroku experience
 
 #!/bin/bash
-git clone http://github.com/lazzarello/instiki-heroku
+git clone git://github.com/lazzarello/instiki-heroku.git
 cd instiki-heroku
 heroku create
 git push heroku master
