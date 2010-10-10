@@ -9,8 +9,6 @@ $:.unshift(File.join(File.dirname(__FILE__), '..', 'vendor', 'plugins', 'rexml',
 
 require File.join(File.dirname(__FILE__), 'boot')
 
-require 'active_support/secure_random'
-
 Rails::Initializer.run do |config|
 
   # Secret session key
