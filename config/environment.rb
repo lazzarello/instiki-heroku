@@ -15,19 +15,13 @@ Rails::Initializer.run do |config|
 
   # Secret session key
   #   The secret session key is automatically generated, and stored
-  #   in a file, for reuse between server restarts. If you want to
-  #   change the key, just delete the file, and it will be regenerated
-  #   on the next restart. Doing so will invalitate all existing sessions.
-  secret_file = Rails.root.join("secret")  
-  if File.exist?(secret_file)  
-    secret = secret_file.read  
-  else  
-    secret =  ActiveSupport::SecureRandom.hex(64)
-    File.open(secret_file, 'w', 0600) { |f| f.write(secret) }  
-  end  
+  #   in a hash. It is typed in this file, so it is not secure and should vary
+  #   from installation to installation. This is a limitation of Heroku, not of
+  #   Rails.
+
   config.action_controller.session = { 
     :session_key => "instiki_session",
-    :secret => secret
+    :secret => 413b360b05de6b16dcb19caa9eedf6fbe32ddbec43616b949f574686db96c6c4
    } 
 
   # Don't do file system STAT calls to check to see if the templates have changed.
