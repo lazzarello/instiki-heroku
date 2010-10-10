@@ -30,7 +30,7 @@ class Beta1Schema < ActiveRecord::Migration
       t.column "address", :string, :limit => 60, :default => "", :null => false
       t.column "password", :string, :limit => 60
       t.column "additional_style", :string
-      t.column "allow_uploads", :integer, :default => 1
+      t.column "allow_uploads", :integer, :default => 0
       t.column "published", :integer, :default => 0
       t.column "count_pages", :integer, :default => 0
       t.column "markup", :string, :limit => 50, :default => "markdownMML"
