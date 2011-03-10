@@ -91,6 +91,15 @@ module WikiHelper
         {:class => 'navlink', :id => 'rollback', :rel => 'nofollow'})
   end
 
-  
+  def wikitoolbar_for(field_id)
+    if @web.markup == :textile
+      javascript_include_tag('jstoolbar/jstoolbar') +
+        javascript_include_tag('jstoolbar/textile') +
+        #javascript_include_tag("jstoolbar/lang/jstoolbar-#{current_language.to_s.downcase}") +
+        javascript_include_tag("jstoolbar/lang/jstoolbar-en") +
+        javascript_tag("var wikiToolbar = new jsToolBar($('#{field_id}')); wikiToolbar.draw();") +
+        stylesheet_link_tag('jstoolbar')
+    end
+  end
 
 end
