@@ -37,6 +37,10 @@ You may be screwed, but I don't know because I recommend running Debian
 GNU/Linux for everything except for entertaining yourself, for that I recommend
 MacOS X.
 
+=== Backing up on Heroku.
+
+http://devcenter.heroku.com/articles/pgbackups
+
 == Features
 
 * Regular expression search: Find deep stuff really fast
